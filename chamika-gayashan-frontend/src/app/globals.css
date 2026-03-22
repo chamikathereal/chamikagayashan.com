@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  
+  /* Shared Base */
+  --bg-dark: #0a0a0a;
+  
+  /* Cyber-Professional Theme (Engineer) */
+  --engineer-primary: #00f0ff;
+  --engineer-bg: #001a1f; 
+  --engineer-accent: #0070f3;
+  
+  /* Gritty Urban Theme (Artist) */
+  --artist-primary: #ff2a2a;
+  --artist-bg: #1a0505;
+  --artist-accent: #ff6b00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --font-inter: var(--font-inter);
+  --font-fira-code: var(--font-fira-code);
+  --font-montserrat: var(--font-montserrat);
+  
+  --color-engineer-primary: var(--engineer-primary);
+  --color-engineer-bg: var(--engineer-bg);
+  --color-engineer-accent: var(--engineer-accent);
+  
+  --color-artist-primary: var(--artist-primary);
+  --color-artist-bg: var(--artist-bg);
+  --color-artist-accent: var(--artist-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--background);
+}
+
+@keyframes shine {
+  0% { background-position: 100%; }
+  100% { background-position: -100%; }
+}
+
+.animate-shine {
+  animation: shine linear infinite;
+}
